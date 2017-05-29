@@ -8,8 +8,10 @@
 
 import UIKit
 
-@IBDesignable
+@IBDesignable 
 class FaceView: UIView {
+    
+    /// @IBInspectable is you have explicitly type you cannot let swift infer it. put all actual type 
     
     @IBInspectable var scale: CGFloat = 0.9
     @IBInspectable var eyesOpen: Bool = true
@@ -57,6 +59,7 @@ class FaceView: UIView {
     }
     
     private func pathForMouth() -> UIBezierPath {
+        
         let mouthWidth = skullRadius / Ratios.SkullRadiusToMouthWidth
         let mouthHeight = skullRadius / Ratios.SkullRadiusToMouthHeight
         let mouthOffset = skullRadius / Ratios.SkullRadiusToMouthOffset
@@ -81,7 +84,8 @@ class FaceView: UIView {
     }
 
     private func pathForSkull() -> UIBezierPath
-    {	let path = UIBezierPath(arcCenter: skullCenter,
+    {
+        let path = UIBezierPath(arcCenter: skullCenter,
      	                        radius: skullRadius,
      	                        startAngle: 0.0,
      	                        endAngle: CGFloat.pi * 2,
