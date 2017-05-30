@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 @IBDesignable 
 class FaceView: UIView {
@@ -33,6 +34,7 @@ class FaceView: UIView {
         case right
     }
     
+    /// UIBezierPath : which is how we'll do it
     private func pathForEye(_ eye: Eye) -> UIBezierPath {
         
         func centerOfEye(_ eye: Eye) -> CGPoint {
@@ -93,7 +95,7 @@ class FaceView: UIView {
         path.lineWidth = lineWidth
         return path
     }
-    
+    /// UIView bounds that describe the entire drawing area (the rect is a subarea)
     override func draw(_ rect: CGRect) {
         // Drawing code
         color.set()

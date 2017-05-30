@@ -59,8 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				EA15B2391E649FB500A6129A /* ViewController.swift */,
-				EA15B23B1E649FB500A6129A /* Main.storyboard */,
 				EA15B24A1E64A05900A6129A /* FaceView.swift */,
+				EA15B23B1E649FB500A6129A /* Main.storyboard */,
 				EA15B2491E64A01000A6129A /* Supporting Files */,
 			);
 			path = FaceIt;
